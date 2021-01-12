@@ -31,7 +31,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:3, isStatic:true});
+	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0.8, isStatic:true});
 	World.add(world, packageBody);
 	
 
@@ -60,7 +60,6 @@ function keyPressed() {
     // Look at the hints in the document and understand how to make the package body fall only on press of the Down arrow key.
 	packageBody.velocityY = -5;
 	Matter.Body.setStatic(packageBody,false);
-    
   }
 }
 
